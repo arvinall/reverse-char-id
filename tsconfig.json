@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "lib": ["ES2020"],  /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "useDefineForClassFields": true,  /* Emit ECMAScript-standard-compliant class fields. */
+    "module": "CommonJS",  /* Specify what module code is generated. */
+    "rootDir": "./src",  /* Specify the root folder within your source files. */
+    "sourceMap": true,  /* Create source map files for emitted JavaScript files. */
+    "outDir": "./dist",  /* Specify an output folder for all emitted files. */
+    "removeComments": true,  /* Disable emitting comments. */
+    "esModuleInterop": true,  /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,  /* Ensure that casing is correct in imports. */
+    "strict": true,  /* Enable all strict type-checking options. */
+    "alwaysStrict": true,  /* Ensure 'use strict' is always emitted. */
+    "skipLibCheck": true,  /* Skip type checking all .d.ts files. */
+    "allowJs": true,  /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+    "checkJs": true,  /* Enable error reporting in type-checked JavaScript files. */
+  },
+  "exclude": [
+    "scripts",
+    "docs",
+    "coverage",
+    "dist",
+    "babel.config.js",
+    "jest.config.js",
+    "typedoc.config.js"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "reverse-char-id",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "transpile": "rimraf dist && tsc --project tsconfig-transpile.json",
+    "lint": "eslint src",
+    "lint:scripts": "eslint scripts",
+    "format": "eslint --fix src",
+    "format:scripts": "eslint --fix scripts",
+    "dev:test": "node scripts/dev-test-script.js",
+    "dev:format": "node scripts/format-script.js",
+    "dev:format:scripts": "node scripts/format-script.js scripts",
+    "docs": "rimraf docs && typedoc --options typedoc.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvinall/reverse-char-id.git"
+  },
+  "keywords": [
+    "reverse",
+    "character",
+    "id",
+    "generator"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.10",
+    "@types/rimraf": "^3.0.2",
+    "babel-jest": "^27.1.0",
+    "chalk": "^4.1.2",
+    "chokidar": "^3.5.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "jest": "^27.1.0",
+    "rimraf": "^3.0.2",
+    "typedoc": "^0.21.9",
+    "typescript": "^4.4.2"
+  },
+  "author": "Arvinall <arvinall021@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arvinall/reverse-char-id/issues"
+  },
+  "homepage": "https://github.com/arvinall/reverse-char-id#readme"
+}
