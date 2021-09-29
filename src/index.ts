@@ -15,21 +15,30 @@ interface IPREDEFINED_RANGES {
   '0 to 9': CharRange
   'a to z': CharRange
   'A to Z': CharRange
-  '# to /': CharRange
+  '! to /': CharRange
+  ': to @': CharRange
+  '[ to `': CharRange
+  '{ to ~': CharRange
 }
 
 export const PREDEFINED_RANGES: IPREDEFINED_RANGES = {
   '0 to 9': ['0', '9'],
   'a to z': ['a', 'z'],
   'A to Z': ['A', 'Z'],
-  '# to /': ['#', '/']
+  '! to /': ['!', '/'],
+  ': to @': [':', '@'],
+  '[ to `': ['[', '`'],
+  '{ to ~': ['{', '~']
 }
 
 interface IREVERSED_PREDEFINED_RANGES {
   '9 to 0': CharRange
   'z to a': CharRange
   'Z to A': CharRange
-  '/ to #': CharRange
+  '/ to !': CharRange
+  '@ to :': CharRange
+  '` to [': CharRange
+  '~ to {': CharRange
 }
 
 export const REVERSED_PREDEFINED_RANGES: IREVERSED_PREDEFINED_RANGES = (
