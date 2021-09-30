@@ -11,7 +11,7 @@ export type CharRange = [string, string]
 export type CodeRange = [number, number]
 export type Range = CharRange | CodeRange
 
-interface IPREDEFINED_RANGES {
+export interface IPREDEFINED_RANGES {
   '0 to 9': CharRange
   'a to z': CharRange
   'A to Z': CharRange
@@ -31,7 +31,7 @@ export const PREDEFINED_RANGES: IPREDEFINED_RANGES = {
   '{ to ~': ['{', '~']
 }
 
-interface IREVERSED_PREDEFINED_RANGES {
+export interface IREVERSED_PREDEFINED_RANGES {
   '9 to 0': CharRange
   'z to a': CharRange
   'Z to A': CharRange
@@ -46,12 +46,10 @@ export const REVERSED_PREDEFINED_RANGES: IREVERSED_PREDEFINED_RANGES = (
     globalThis.Object
       .entries(PREDEFINED_RANGES)
       .map(
-        ([rangeTitle, charRange]: [string, CharRange]): [string, CharRange] => (
-          (rangeTitles: string[]): [string, CharRange] => [
-            `${rangeTitles[2]} ${rangeTitles[1]} ${rangeTitles[0]}`,
-            [...charRange].reverse() as CharRange
-          ]
-        )(rangeTitle.split(' '))
+        ([rangeTitle, charRange]: [string, CharRange]): [string, CharRange] => [
+          rangeTitle.split(' ').reverse().join(' '),
+          [...charRange].reverse() as CharRange
+        ]
       )
   ) as unknown as IREVERSED_PREDEFINED_RANGES
 )
