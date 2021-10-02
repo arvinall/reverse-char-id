@@ -1,14 +1,28 @@
-import { test } from '@jest/globals'
+import {
+  test,
+  expect,
+  describe
+} from '@jest/globals'
 
 import {
+  CodeRange,
+  CharRange,
+
   IREVERSED_PREDEFINED_RANGES,
   IPREDEFINED_RANGES,
 
   REVERSED_PREDEFINED_RANGES,
-  PREDEFINED_RANGES
+  PREDEFINED_RANGES,
+
+  rangeToCodeRange
 } from '..'
 
-const { Object } = globalThis
+const {
+  Object,
+  Number,
+
+  Math
+} = globalThis
 
 test(
   'REVERSED_PREDEFINED_RANGES object' +
@@ -28,3 +42,35 @@ test(
     }
   }
 )
+
+describe('Method', () => {
+  describe('rangeToCodeRange', () => {
+    test(
+      'Must return new Array instance' +
+      ' with range parameter elements if elements are numbers',
+      () => {
+        const codeRange: CodeRange = [
+          Math.round(Math.random() * 100),
+          Math.round(Math.random() * 100)
+        ]
+
+        expect(rangeToCodeRange(codeRange)).not.toBe(codeRange)
+        expect(rangeToCodeRange(codeRange)).toEqual(codeRange)
+      }
+    )
+
+    test(
+      'Must return new Array instance' +
+      ' with range parameter elements code point if elements are strings',
+      () => {
+        const charRange: CharRange = ['d', 'g']
+        const codeRange: CodeRange = [
+          Number(charRange[0].codePointAt(0)),
+          Number(charRange[1].codePointAt(0))
+        ]
+
+        expect(rangeToCodeRange(charRange)).toEqual(codeRange)
+      }
+    )
+  })
+})
