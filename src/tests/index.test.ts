@@ -154,9 +154,11 @@ describe('Class', () => {
           () => {
             const reverseCharID: ReverseCharID = new ReverseCharID()
 
-            ;(
-              ['', '0', '1', '2']
-            ).forEach((lastID: string, index: number, lastIDsList: string[]) => {
+            ;(['', '0', '1', '2']).forEach((
+              lastID: string,
+              index: number,
+              lastIDsList: string[]
+            ) => {
               mockGenerateNextID.mockReturnValueOnce(lastIDsList[index + 1])
 
               expect(reverseCharID.toValue()).toBe(lastIDsList[index + 1])
