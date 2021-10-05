@@ -7,7 +7,8 @@ import {
 import { CodeRange } from '..'
 import {
   getFirstCodeRangesChar,
-  getLastCodeRangesChar
+  getLastCodeRangesChar,
+  codeRangeIsReverse
 } from '../id'
 
 const {
@@ -42,5 +43,15 @@ describe('Method', () => {
     ).toBe(
       String.fromCodePoint(codeRanges[codeRanges.length - 1][1])
     )
+  })
+
+  describe('codeRangeIsReverse', () => {
+    test('Must return false when codeRange is not in reverse order', () => {
+      expect(codeRangeIsReverse([0, 5])).toBe(false)
+    })
+
+    test('Must return true when codeRange is in reverse order', () => {
+      expect(codeRangeIsReverse([5, 0])).toBe(true)
+    })
   })
 })
