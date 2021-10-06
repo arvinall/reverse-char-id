@@ -21,16 +21,15 @@ export function getCharCodeRange (
   const charCode: number = char.codePointAt(0) as number
 
   for (const codeRange of codeRanges) {
-    if (
+    if ((
       !codeRangeIsReverse(codeRange) &&
       charCode >= codeRange[0] &&
       charCode <= codeRange[1]
-    ) return codeRange
-
-    if (
+    ) || (
+      codeRangeIsReverse(codeRange) &&
       charCode >= codeRange[1] &&
       charCode <= codeRange[0]
-    ) return codeRange
+    )) return codeRange
   }
 }
 
