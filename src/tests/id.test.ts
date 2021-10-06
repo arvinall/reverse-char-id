@@ -94,5 +94,14 @@ describe('Method', () => {
       expect(getCharCodeRange('m', codeRanges)).toBe(codeRanges[2])
       expect(getCharCodeRange('(', codeRanges)).toBe(codeRanges[3])
     })
+
+    test('Must return undefined when character is not in any range', () => {
+      const codeRanges: CodeRange[] = [
+        [Number('Z'.codePointAt(0)), Number('A'.codePointAt(0))],
+        [Number('0'.codePointAt(0)), Number('9'.codePointAt(0))]
+      ]
+
+      expect(getCharCodeRange('m', codeRanges)).toBeUndefined()
+    })
   })
 })
