@@ -9,7 +9,8 @@ import {
   getFirstCodeRangesChar,
   getLastCodeRangesChar,
   codeRangeIsReverse,
-  getCharCodeRange
+  getCharCodeRange,
+  getNextCodeRangesChar
 } from '../id'
 
 const {
@@ -103,5 +104,51 @@ describe('Method', () => {
 
       expect(getCharCodeRange('m', codeRanges)).toBeUndefined()
     })
+  })
+
+  describe('getNextCodeRangesChar', () => {
+    test(
+      'Must return first character of next range' +
+      ' if char parameter is equal to last character in its range',
+      () => {
+        const codeRanges: CodeRange[] = [
+          [Number('Z'.codePointAt(0)), Number('A'.codePointAt(0))],
+          [Number('0'.codePointAt(0)), Number('9'.codePointAt(0))],
+          [Number('z'.codePointAt(0)), Number('a'.codePointAt(0))],
+          [Number('!'.codePointAt(0)), Number('/'.codePointAt(0))]
+        ]
+
+        expect(getNextCodeRangesChar('A', codeRanges)).toBe('0')
+        expect(getNextCodeRangesChar('9', codeRanges)).toBe('z')
+        expect(getNextCodeRangesChar('a', codeRanges)).toBe('!')
+      }
+    )
+
+    test('Must return next character of char parameter range with increase char code point by 1', () => {
+      const codeRanges: CodeRange[] = [
+        [Number('Z'.codePointAt(0)), Number('A'.codePointAt(0))],
+        [Number('0'.codePointAt(0)), Number('9'.codePointAt(0))],
+        [Number('z'.codePointAt(0)), Number('a'.codePointAt(0))],
+        [Number('!'.codePointAt(0)), Number('/'.codePointAt(0))]
+      ]
+
+      expect(getNextCodeRangesChar('4', codeRanges)).toBe('5')
+      expect(getNextCodeRangesChar('(', codeRanges)).toBe(')')
+    })
+
+    test(
+      'Must return next character of char parameter range with decrease char code point by 1',
+      () => {
+        const codeRanges: CodeRange[] = [
+          [Number('Z'.codePointAt(0)), Number('A'.codePointAt(0))],
+          [Number('0'.codePointAt(0)), Number('9'.codePointAt(0))],
+          [Number('z'.codePointAt(0)), Number('a'.codePointAt(0))],
+          [Number('!'.codePointAt(0)), Number('/'.codePointAt(0))]
+        ]
+
+        expect(getNextCodeRangesChar('M', codeRanges)).toBe('L')
+        expect(getNextCodeRangesChar('m', codeRanges)).toBe('l')
+      }
+    )
   })
 })
