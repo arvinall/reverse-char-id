@@ -52,6 +52,7 @@ export function getNextCodeRangesChar (
   return String.fromCodePoint(nextCode)
 }
 
+// istanbul ignore next
 export function generateNextID ({
   codeRanges,
   lastID
