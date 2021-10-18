@@ -3,8 +3,7 @@ import { generateNextID } from './id'
 const {
   String,
   Number,
-  Array,
-  Symbol
+  Array
 } = globalThis
 
 export type CharRange = [string, string]
@@ -96,7 +95,7 @@ export class ReverseCharID {
     return this.#lastID
   }
 
-  [Symbol.toPrimitive]: () => string = this.toValue
+  [globalThis.Symbol.toPrimitive]: () => string = this.toValue
 
   toString: () => string = this.toValue
 }
