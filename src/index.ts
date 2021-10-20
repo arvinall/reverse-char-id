@@ -6,6 +6,15 @@ const {
   Array
 } = globalThis
 
+/**
+ * Character range
+ *
+ * @example
+ * ```typescript
+ * const a_to_z: CharRange = ['a', 'z']
+ * const Z_to_A: CharRange = ['Z', 'A']
+ * ```
+ */
 export type CharRange = [string, string]
 export type CodeRange = [number, number]
 export type Range = CharRange | CodeRange
