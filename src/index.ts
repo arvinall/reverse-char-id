@@ -163,6 +163,7 @@ export class ReverseCharID {
   #codeRanges: CodeRange[] = [PREDEFINED_RANGES['0 to 9']].map(rangeToCodeRange)
   #lastID: string = ''
 
+  /** @param options */
   constructor ({ ranges, lastID }: IReverseCharIDOptions = {}) {
     if (ranges instanceof Array) this.#codeRanges = ranges.map(rangeToCodeRange)
     if (typeof lastID === 'string') this.#lastID = lastID
