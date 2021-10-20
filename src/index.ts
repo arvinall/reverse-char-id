@@ -128,6 +128,7 @@ export function rangeToCodeRange (range: Range): CodeRange {
 export interface IReverseCharIDOptions {
   /** List of ranges in any order **Default**: `[['0', '9']]` */
   ranges?: Range[]
+  /** Start point of reverseCharID  **Default**: `''` */
   lastID?: string
 }
 
