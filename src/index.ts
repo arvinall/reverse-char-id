@@ -105,6 +105,7 @@ export const REVERSED_PREDEFINED_RANGES: IREVERSED_PREDEFINED_RANGES = (
   ) as unknown as IREVERSED_PREDEFINED_RANGES
 )
 
+/** Convert {@link Range} to {@link CodeRange} */
 export function rangeToCodeRange (range: Range): CodeRange {
   const codeRange: number[] = []
 
