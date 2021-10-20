@@ -81,6 +81,17 @@ export interface IREVERSED_PREDEFINED_RANGES {
   '~ to {': CharRange
 }
 
+/**
+ * Completely reversed version of {@link PREDEFINED_RANGES}
+ *
+ * @example
+ * ```typescript
+ * const z_to_zero: Range[] = [
+ *   REVERSED_PREDEFINED_RANGES['z to a'],
+ *   REVERSED_PREDEFINED_RANGES['9 to 0']
+ * ]
+ * ```
+ */
 export const REVERSED_PREDEFINED_RANGES: IREVERSED_PREDEFINED_RANGES = (
   globalThis.Object.fromEntries(
     globalThis.Object
