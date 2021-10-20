@@ -16,6 +16,18 @@ const {
  * ```
  */
 export type CharRange = [string, string]
+/**
+ * CodePoint range
+ *
+ * @example
+ * ```typescript
+ * const a_to_z: CodeRange = [97, 122]
+ * const Z_to_A: CodeRange = [
+ *   Number(String.prototype.codePointAt.call('Z', 0)),
+ *   Number(String.prototype.codePointAt.call('A', 0))
+ * ]
+ * ```
+ */
 export type CodeRange = [number, number]
 export type Range = CharRange | CodeRange
 
