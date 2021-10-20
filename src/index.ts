@@ -130,6 +130,35 @@ export interface IReverseCharIDOptions {
   lastID?: string
 }
 
+/**
+ * ReverseCharID generate next ID
+ *
+ * @example
+ * ```typescript
+ * const reverseCharID: ReverseCharID = new ReverseCharID()
+ *
+ * console.log(
+ *   `${reverseCharID}`,
+ *   reverseCharID.toString(),
+ *   reverseCharID.toValue(),
+ *   String(reverseCharID)
+ * ) // 0 1 2 3
+ * ```
+ *
+ * ```typescript
+ * const reverseCharID: ReverseCharID = new ReverseCharID({
+ *   ranges: [REVERSED_PREDEFINED_RANGES['z to a']],
+ *   lastID: 'm'
+ * })
+ *
+ * console.log(
+ *   `${reverseCharID}`,
+ *   reverseCharID.toString(),
+ *   reverseCharID.toValue(),
+ *   String(reverseCharID)
+ * ) // l k j i
+ * ```
+*/
 export class ReverseCharID {
   #codeRanges: CodeRange[] = [PREDEFINED_RANGES['0 to 9']].map(rangeToCodeRange)
   #lastID: string = ''
