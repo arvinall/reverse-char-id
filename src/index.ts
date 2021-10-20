@@ -179,6 +179,7 @@ export class ReverseCharID {
     return this.#lastID
   }
 
+  /** Reference to {@link toValue} */
   [globalThis.Symbol.toPrimitive]: () => string = this.toValue
 
   toString: () => string = this.toValue
