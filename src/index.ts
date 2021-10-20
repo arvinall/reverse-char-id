@@ -29,6 +29,15 @@ export type CharRange = [string, string]
  * ```
  */
 export type CodeRange = [number, number]
+/**
+ * Character or codePoint range
+ *
+ * @example
+ * ```typescript
+ * const a_to_z: Range = [97, 122]
+ * const Z_to_A: Range = ['Z', 'A']
+ * ```
+ */
 export type Range = CharRange | CodeRange
 
 export interface IPREDEFINED_RANGES {
