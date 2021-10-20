@@ -7,6 +7,7 @@ const title = packageJson.name.split('-').map(
 module.exports = {
   name: title,
   includeVersion: true,
+  entryPointStrategy: 'expand',
   entryPoints: ['src'],
   readme: 'README.md',
   exclude: ['src/tests', 'src/**/tests', 'src/**/**/tests'],
@@ -14,5 +15,5 @@ module.exports = {
   excludeInternal: true,
   excludePrivate: true,
   excludeProtected: true,
-  disableOutputCheck: true
+  cleanOutputDir: true
 }
