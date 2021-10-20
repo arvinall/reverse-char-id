@@ -169,6 +169,7 @@ export class ReverseCharID {
     if (typeof lastID === 'string') this.#lastID = lastID
   }
 
+  /** @returns Next ID */
   toValue (): string {
     this.#lastID = generateNextID({
       codeRanges: this.#codeRanges,
