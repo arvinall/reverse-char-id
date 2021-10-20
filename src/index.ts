@@ -50,6 +50,17 @@ export interface IPREDEFINED_RANGES {
   '{ to ~': CharRange
 }
 
+/**
+ * Some useful predefined ranges
+ *
+ * @example
+ * ```typescript
+ * const zero_to_z: Range[] = [
+ *   PREDEFINED_RANGES['0 to 9'],
+ *   PREDEFINED_RANGES['a to z']
+ * ]
+ * ```
+ */
 export const PREDEFINED_RANGES: IPREDEFINED_RANGES = {
   '0 to 9': ['0', '9'],
   'a to z': ['a', 'z'],
