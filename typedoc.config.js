@@ -15,5 +15,6 @@ module.exports = {
   excludeInternal: true,
   excludePrivate: true,
   excludeProtected: true,
-  cleanOutputDir: true
+  cleanOutputDir: true,
+  theme: 'node_modules/typedoc-github-wiki-theme/dist'
 }
