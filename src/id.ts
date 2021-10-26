@@ -16,6 +16,16 @@ export function getFirstCodeRangesChar (codeRanges: CodeRange[]): string {
   return String.fromCodePoint(codeRanges[0][0])
 }
 
+/**
+ * @returns Character of last codePoint in last codeRange
+ *
+ * @example
+ * ```typescript
+ * const a_to_z: CodeRange = [97, 122]
+ *
+ * console.log(getLastCodeRangesChar([a_to_z])) // z
+ * ```
+ */
 export function getLastCodeRangesChar (codeRanges: CodeRange[]): string {
   return String.fromCodePoint(codeRanges[codeRanges.length - 1][1])
 }
