@@ -30,6 +30,18 @@ export function getLastCodeRangesChar (codeRanges: CodeRange[]): string {
   return String.fromCodePoint(codeRanges[codeRanges.length - 1][1])
 }
 
+/**
+ * Check codeRange is in reverse order or not
+ *
+ * @example
+ * ```typescript
+ * const a_to_z: CodeRange = [97, 122]
+ * const z_to_a: CodeRange = [...a_to_z].reverse()
+ *
+ * console.log(codeRangeIsReverse(a_to_z)) // false
+ * console.log(codeRangeIsReverse(z_to_a)) // true
+ * ```
+ */
 export function codeRangeIsReverse (codeRange: CodeRange): boolean {
   return codeRange[1] < codeRange[0]
 }
