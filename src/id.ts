@@ -46,6 +46,20 @@ export function codeRangeIsReverse (codeRange: CodeRange): boolean {
   return codeRange[1] < codeRange[0]
 }
 
+/**
+ * @returns codeRange that contain target character
+ *
+ * @example
+ * ```typescript
+ * const zero_to_nine: CodeRange = [48, 57]
+ * const z_to_a: CodeRange = [122, 97]
+ *
+ * const codeRanges: CodeRange[] = [zero_to_nine, z_to_a]
+ *
+ * console.log(getCharCodeRange('4', codeRanges) === zero_to_nine) // true
+ * console.log(getCharCodeRange('m', codeRanges) === z_to_a) // true
+ * ```
+ */
 export function getCharCodeRange (
   char: string,
   codeRanges: CodeRange[]
