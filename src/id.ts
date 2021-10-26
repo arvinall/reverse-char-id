@@ -2,6 +2,16 @@ import { CodeRange } from '.'
 
 const { String } = globalThis
 
+/**
+ * @returns Character of first codePoint in first codeRange
+ *
+ * @example
+ * ```typescript
+ * const a_to_z: CodeRange = [97, 122]
+ *
+ * console.log(getFirstCodeRangesChar([a_to_z])) // a
+ * ```
+ */
 export function getFirstCodeRangesChar (codeRanges: CodeRange[]): string {
   return String.fromCodePoint(codeRanges[0][0])
 }
