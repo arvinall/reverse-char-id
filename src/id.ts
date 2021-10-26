@@ -114,6 +114,27 @@ export function getNextCodeRangesChar (
 }
 
 // istanbul ignore next
+/**
+ * @returns Next ID based on codeRanges and lastID
+ *
+ * @param options
+ *
+ * @example
+ * ```typescript
+ * const codeRanges: CodeRange = [
+ *   [48, 57], // 0 to 9
+ *   [122, 97] // z to a
+ * ]
+ *
+ * console.log(generateNextID({ codeRanges, lastID: '' })) // 0
+ *
+ * console.log(generateNextID({ codeRanges, lastID: '9' })) // z
+ * console.log(generateNextID({ codeRanges, lastID: '0z' })) // 0y
+ *
+ * console.log(generateNextID({ codeRanges, lastID: 'a' })) // 00
+ * console.log(generateNextID({ codeRanges, lastID: 'aa' })) // 000
+ * ```
+ */
 export function generateNextID ({
   codeRanges,
   lastID
