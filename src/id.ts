@@ -79,6 +79,21 @@ export function getCharCodeRange (
   }
 }
 
+/**
+ * @returns Next character based on codeRanges
+ *
+ * @example
+ * ```typescript
+ * const codeRanges: CodeRange = [
+ *   [48, 57], // 0 to 9
+ *   [122, 97] // z to a
+ * ]
+ *
+ * console.log(getNextCodeRangesChar('4', codeRanges)) // 5
+ * console.log(getNextCodeRangesChar('9', codeRanges)) // z
+ * console.log(getNextCodeRangesChar('m', codeRanges)) // l
+ * ```
+ */
 export function getNextCodeRangesChar (
   char: string,
   codeRanges: CodeRange[]
