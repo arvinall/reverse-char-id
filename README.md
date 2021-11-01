@@ -1,3 +1,9 @@
+[![Typescript](https://img.shields.io/static/v1?label=&message=typescript&color=white&style=flat&logo=typescript)](https://www.typescriptlang.org)
+[![Standard Code Style](https://img.shields.io/static/v1?label=code%20style&message=standard&color=yellow&style=flat)](https://standardjs.com)
+[![GitHub](https://img.shields.io/github/license/arvinall/reverse-char-id)](https://github.com/arvinall/reverse-char-id/blob/main/LICENSE)
+
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/arvinall/reverse-char-id?logo=github)](https://github.com/arvinall/reverse-char-id/releases)
+[![npm](https://img.shields.io/npm/v/reverse-char-id?logo=npm)](https://www.npmjs.com/package/reverse-char-id)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/reverse-char-id)
 ![npm](https://img.shields.io/npm/dt/reverse-char-id)
 
@@ -5,13 +11,6 @@
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/arvinall/reverse-char-id)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/arvinall/reverse-char-id)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/arvinall/reverse-char-id)
-
-[![Standard Code Style](https://img.shields.io/static/v1?label=code%20style&message=standard&color=yellow&style=flat)](https://standardjs.com)
-[![Typescript](https://img.shields.io/static/v1?label=&message=typescript&color=white&style=flat&logo=typescript)](https://www.typescriptlang.org)
-
-[![GitHub](https://img.shields.io/github/license/arvinall/reverse-char-id)](https://github.com/arvinall/reverse-char-id/blob/main/LICENSE)
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/arvinall/reverse-char-id?logo=github)](https://github.com/arvinall/reverse-char-id/releases)
-[![npm](https://img.shields.io/npm/v/reverse-char-id?logo=npm)](https://www.npmjs.com/package/reverse-char-id)
 
 # Reverse Char ID
 [![API Reference](https://img.shields.io/static/v1?label=&message=API%20Reference&color=grey&style=flat)](https://github.com/arvinall/reverse-char-id/wiki/index)
