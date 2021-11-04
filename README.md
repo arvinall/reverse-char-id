@@ -34,7 +34,7 @@
 |  8  |  9  |  00 |  01 |  .  |  i  |  j  |  k  |  l  |  .  |  yx |  xz |  xy |  xx |
 |  02 |  03 |  04 |  05 |  .  |  m  |  n  |  o  |  p  |  .  |  zzz|  zzy|  zzx|  zyz|
 
-|char |  9  | to  |  7  |  .  |chars| 7->9| to  | a->c|  .  |char | c->a| to  | 9->7|
+|char |  9  | to  |  7  |  .  |chars|7 > 9| to  |a > c|  .  |char |c > a| to  |9 > 7|
 |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |     |     |     |     |  .  |     |     |     |     |  .  |     |     |     |     |
 |  9  |  8  |  7  |  99 |  .  |  7  |  8  |  9  |  a  |  .  |  c  |  b  |  a  |  9  |
@@ -43,9 +43,9 @@
 |  999|  998|  997|  989|  .  |  87 |  88 |  89 |  8a |  .  |  bc |  bb |  ba |  b9 |
 
 ## Usage
-> [Complete Package API Reference](https://github.com/arvinall/reverse-char-id/wiki/index)
+> [Visit complete API reference](https://github.com/arvinall/reverse-char-id/wiki/index)
 
-> *This package export its API over CommonJS pattern
+> *This package export its API over CommonJS pattern.
 
 ### Install
 ```shell
@@ -98,7 +98,7 @@ console.log(
   reverseCharID.toString(),
   reverseCharID.toValue(),
   String(reverseCharID)
-) // b a  0  1
+) // b a 0 1
 ```
 
 ## License
