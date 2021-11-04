@@ -1,7 +1,7 @@
 {
   "name": "reverse-char-id",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Reverse character ID is a sequential and predictable ID generator with its specific algorithm.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
