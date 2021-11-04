@@ -4,9 +4,13 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
+    "prepack": "npm run transpile:production",
+    "prepublishOnly": "npm run transpile:production",
     "test": "jest",
     "transpile": "rimraf dist && tsc --project tsconfig-transpile.json",
+    "transpile:production": "rimraf dist && npx tsc -p tsconfig-transpile.json --declarationMap false --sourceMap false",
     "lint": "eslint src",
     "lint:scripts": "eslint scripts",
     "format": "eslint --fix src",
